@@ -38,7 +38,7 @@ function Login() {
 
       localStorage.setItem("username", res.data.username);
 
-      navigate("/");
+      navigate("/home");;
     }
 
     catch (error) {
