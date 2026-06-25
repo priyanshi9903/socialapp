@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { signup } from "../api/userApi";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     username: "",
@@ -25,6 +28,8 @@ function Signup() {
       const res = await signup(formData);
 
       alert(res.data.message);
+
+      navigate("/login");
 
     } catch (error) {
 
