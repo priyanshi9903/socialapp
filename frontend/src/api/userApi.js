@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/users";
+const API = "https://socialapp-backend-kne4.onrender.com/api/users";
 
 export const signup = (data) => {
   return axios.post(`${API}/signup`, data);
